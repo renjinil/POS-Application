@@ -1,0 +1,198 @@
+<div class="container-fluid outer-wrapper">
+  <div class="row  caffe-title">
+    <div class="col">
+      <img src="../assets/images/cappuccino.jpg" alt="coffe_shop_logo" class="caffe-logo" />
+      <header class="caffe-head">CAFFE PICCOLO</header>
+      <p class="tagline">Your Cup of Inspiration</p>
+    </div>
+  </div>
+
+  <div class="container row" *ngIf ="isbillsection ; else payment_ready">
+    <div class="col">
+      <div class="table-responsive initial_bill">
+         <div class="clear_butn" (click)="clear_bill()">
+           <img  class="close" src="../assets/images/closebutton.png" alt="clear_bill"/>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sl No:</th>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Each</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of added_coffe_name; let i = index">
+              <td>{{i +1}}</td>
+              <td>{{item.name}}</td>
+              <td>
+                  <input type="text" placeholder="1"  [(ngModel)] = "qty[item.name]" (ngModelChange)="modelChanged($event)">
+              </td>
+              <td>{{item.amount}}</td>
+              <td>{{item.Total | currency:'&#8377;'}}</td>
+            </tr>
+          </tbody>
+        </table>
+           <div class="grand_tl">Grand Total : {{ grand_total | currency:'&#8377;' }}</div>
+      </div>
+      <div class="payment_btn" (click)="payement_proceed()">
+       <img  class="payment" src="../assets/images/pay.png" alt="clear_bill"/>
+      </div>
+    </div>
+
+    <div class="col-5 coffe_list">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Top Menu</a></li>
+          <li class="breadcrumb-item" aria-current="page">{{getCoffename.Name}}</li>
+        </ol>
+      </nav>
+      <div *ngIf="iscoffe; else iscoffe_confirmed">
+        <div *ngFor="let coffe of coffeName$" class="coffe_brand" (click)="select_coffe(coffe)">
+          {{coffe.Name}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ng-template #iscoffe_confirmed>
+    <div class="flavour_head"> Choose Your Flavour!</div>
+    <div *ngFor="let flavour of selected_coffe" class="coffe_brand" (click)="select_flavour(flavour)" [ngClass]="status ? 'success' : 'coffe_brand'">
+      {{flavour.name}}
+      <p>{{flavour.amount}}</p>
+    </div>
+    <button class="back_button" mat-raised-button (click)="togglef()">Back</button>
+  </ng-template>
+
+
+<ng-template #payment_ready>
+  <div class=" container-fluid row">
+    <div class="col-8 final_bill"> 
+      <h6>CAFFE PICCOLO</h6>
+      <p class="shp_address"> Infopark Campus, Kakkanad, Kerala 682030</p>
+      <div> 
+       <p class="cash_bill"> Cash Bill<p>
+         <div class="row">
+           <p class="bill_no col-8">Bill No:{{billno}}<br>Buyers VAT TIN : {{32567845231}}</p>
+           <p class="date_tdy col">Date: {{date | date : "dd-MM-y" }}<br>Time: {{ date | date:'h:mm a'}}</p>
+         </div>
+        </div>
+     <table class="table table_final">
+          <thead>
+            <tr>
+              <th>Sl No:</th>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Each</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of added_coffe_name; let i = index">
+              <td>{{i +1}}</td>
+              <td>{{item.name}}</td>
+              <td>
+                 {{item.qty}}
+              </td>
+              <td>{{item.amount}}</td>
+              <td>{{item.Total | currency:'&#8377;'}}</td>
+            </tr>
+          </tbody>
+        </table>
+          <div class="grand_tl"><span class="net_value">Net Value :</span>{{ grand_total | currency:'&#8377;' }}<br><span class="vat">OUTPUT VAT @ 2%: </span>{{outputvat | number : '1.2'}} 
+          <br> <span class="net_value">Grand Total :</span> {{Total_amount | number : '1.2'}}
+          </div>
+       
+          <div class="thanks_note">
+            <p class="thanks">Thank you Visit Again [VAT Inclusive]</p>
+            <p class="wbsite"><a href="#">www.caffepiccolo.com</a></p>
+          </div>
+    </div>
+     <div class="col">
+      <h6 class="paymnt_head"> payment modes</h6>
+      <div class="row cash_mode">
+        <div class="col-4"></div>
+        <div class="col">
+          <button mat-raised-button (click)="cash_pay()" [ngClass]="status ? 'mat-flat-button' : ' mat-raised-button'" > cash</button>
+        </div>
+        <div class="col">
+            <button mat-raised-button (click)="card_pay()"> Credit</button>
+        </div>
+         <div class="col-2"></div>
+      </div>
+           <div *ngIf=" cashmodetempt ;else cardmodetempt" > 
+            <div class="grand_tl_cash"><span class="net_value">Net Value :</span>{{ grand_total | currency:'&#8377;' }}<br><span class="vat">OUTPUT VAT @ 2%: </span>{{outputvat | number : '1.2'}} 
+          <br><span class="net_value"> Grand Total :</span>{{Total_amount | number : '1.2'}}
+          </div>
+          <div class="row cance_done_cash">
+              <div class="col-3"></div>
+             <div class="col">
+               <button  mat-raised-button >Cancel</button>
+             </div>
+             <div class="col-1"></div>
+             <div class="col">
+               <button mat-raised-button (click)="openDialog()"> Done</button>
+             </div>
+               <div class="col-1"></div>
+          </div>
+           </div>
+     </div>
+
+  </div>
+  <button class="back_button" mat-raised-button (click) ="backto_coffelist()">Back</button>
+</ng-template>
+</div>
+
+<ng-template #cardmodetempt>
+<div class="row">
+  <div class="col">
+      <mat-radio-button class="select_cardc" >
+      Credit or Debit Card
+      </mat-radio-button>
+  </div>
+      <div class="col">
+        <img class="card_image"  src="../assets/images/card.jpg" alt="card image"/>
+     </div>
+   <div class="col">
+        <mat-form-field class="select_bankc">
+        <mat-select >
+          <mat-option *ngFor="let name of bank_Name" [value]="name.value">
+            {{name.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+   </div>
+    
+</div>
+
+<div class="row">
+  <div class="col">
+ <div class="form-group">
+  <label for="usr">Card Number</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+  </div>
+   <div class="col">
+       <div class="form-group">
+  <label for="usr">Expiration</label>
+  <input type="text" class="form-control " id="month" placeholder="MM">
+  <input type="text" class="form-control " id="year" placeholder="YY">
+</div>
+  </div>   
+</div>
+       <div class="row cance_done_cash">
+              <div class="col-3"></div>
+             <div class="col">
+               <button  mat-raised-button >Cancel</button>
+             </div>
+             <div class="col-1"></div>
+             <div class="col">
+               <button mat-raised-button (click)="openDialog()"> Done</button>
+             </div>
+               <div class="col-1"></div>
+          </div>
+</ng-template>
+

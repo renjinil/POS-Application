@@ -1,0 +1,182 @@
+[
+    {
+        "Name": "Caffè Americano",
+        "amount": "RS. 100",
+        "flavours": [
+            {
+                "name": "A shot of Americano espresso",
+                "amount": " 120",
+                "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Americano steamed milk and foam",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Café Latte",
+        "amount": "RS. 75",
+        "flavours": [
+            {
+                "name": "A shot of Latte in an espresso cup",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Latee creamy vanilla flavor",
+                "amount": "110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Cappuccino",
+        "amount": "RS. 150",
+        "flavours": [
+            {
+                "name": "Double shot of Cappuccino",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Steamed and foamed Cappuccino ",
+                "amount": "110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Espresso",
+        "amount": "RS. 180",
+        "flavours": [
+            {
+                "name": "foam or chocolate on Espresso",
+                "amount": "120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Steamed and foamed Espresso ",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Flat White",
+        "amount": "RS. 90",
+        "flavours": [
+            {
+                "name": "chocolate on Flat White",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "creamy vanilla Flat White",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Long Black",
+        "amount": "RS. 110",
+        "flavours": [
+            {
+                "name": "roasted coffee with buttery caramel Black",
+                "amount": "120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "creamy vanilla Black",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Macchiato",
+        "amount": "RS. 85",
+        "flavours": [
+            {
+                "name": "Short macchiato",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Long macchiato",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Irish Coffee",
+        "amount": "RS. 130",
+        "flavours": [
+            {
+                "name": "Light roast Irish",
+                "amount": "120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Dark roast Irish",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Vienna",
+        "amount": "RS. 120",
+        "flavours": [
+            {
+                "name": "Vienna with chocolate powder",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Steamed milk Vienna",
+                "amount": " 110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    },
+    {
+        "Name": "Affogato",
+        "amount": "RS. 100",
+        "flavours": [
+            {
+                "name": "A single shot of Affogato",
+                "amount": " 120",
+                 "Total" : "120",
+                "qty":1
+            },
+            {
+                "name": "Affogato with vanilla ice-cream",
+                "amount": "110",
+                 "Total" : "110",
+                "qty":1
+            }
+        ]
+    }
+]

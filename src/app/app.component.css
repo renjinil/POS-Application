@@ -1,0 +1,209 @@
+.outer-wrapper{
+    /*box-shadow: 1vw 1vw 1vw gray;*/
+}
+.caffe-title{
+    box-shadow: 1vw 0vw 1vw #b56521;
+    position: relative;
+    background: -webkit-linear-gradient(#844a18, #000);
+}
+.caffe-head{
+    display: inline;
+    position: absolute;
+    left: 1vw;
+    transform: rotate(-20deg);
+    color: #fff;
+    transform-style: preserve-3d;
+    top: 2vw;
+    font-size: 1.2vw;
+    font-stretch: extra-condensed;
+    font-style: oblique;
+}
+.caffe-logo{
+    width:7vw;
+    height: 7vw;
+    border-radius: 4vw;
+}
+.tagline{
+    background: -webkit-linear-gradient(#844a18, #f8f9fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.container{
+    margin: 0 auto;
+}
+.coffe_list{
+    box-shadow: 0vw 0vw 1vw #d8d4d1;
+    border-radius: 3vw;
+}
+.breadcrumb{
+    background-color: #400208;
+}
+.breadcrumb-item{   
+color:#f3cfb0;
+} 
+.breadcrumb-item a{   
+color:#f3cfb0;
+}  
+nav{
+    margin-top: 1vw;
+}  
+.coffe_brand{
+    width: 14vw;
+    min-height: 3vw;
+    color: #fff;
+    background-color: #381e03;
+    margin-bottom: 1vw;
+    text-align: center;
+    margin: 1vw auto;
+    padding-top: 0.5vw;
+    border-radius: 1vw;
+}
+
+.flavour_head{
+    text-align: center;
+    background: -webkit-linear-gradient(#ec7510, #2f1c0f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2.1vw;
+    font-style: oblique;
+    font-family: -webkit-body;
+}
+.table {
+    width: 85%;
+    margin-top: 1.5vw;
+    font-size: 1.1vw;
+}
+.back_button{
+    margin-bottom: 4vw;
+    margin-top: 4vw;
+    margin-left: 17vw;
+}
+.success{
+    background-color: #753c02;
+}
+button, input {
+    overflow: visible;
+    width: 2vw;
+    border: none;
+}
+input:focus {
+    outline:none;
+}
+.table td, .table th {
+   
+    border-top:none;
+}
+
+.grand_tl{
+    text-align: right;
+    padding-right: 8vw;
+    padding-bottom: 2vw;
+}
+.table{
+    border-bottom: 1px solid #f3ecec;
+}
+.initial_bill{
+      box-shadow: 0vw 0vw 1vw #d8d4d1;
+    margin-left: -2vw;
+    margin-top: 1vw;
+}
+
+.close{
+    width: 2vw;
+    height: 2vw;
+}
+.payment{
+    width: 5vw;
+    height: 3vw;
+    border-radius: 2vw;
+}
+.payment_btn{
+    margin-left: 30vw;
+    margin-top: 1vw;
+}
+h6{
+    text-align: center;
+}
+.shp_address, .cash_bill, .thanks_note{
+    text-align: center;
+}
+.table_final{
+        width: 88%;
+    margin-top: -1vw;
+}
+.thanks{
+        margin-bottom: -0.4vw;
+}
+.final_bill {
+    margin-top: 2vw;
+    border: 0.01vw solid;
+    box-shadow: 1vw 0vw 1vw #e2e2e2 inset;
+}
+.vat{
+    margin-right: 4vw;;
+}
+.paymnt_head{
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 2vw;
+     padding-left: 8vw;
+    font-size: 2vw;
+}
+.cash_mode{
+    padding-top: 3vw;
+}
+.net_value{
+    padding-right: 3vw;
+}
+.grand_tl_cash{
+    text-align: right;
+    padding-right: 3vw;
+    margin-top: 2vw;
+    line-height: 3vw;
+}
+.cance_done_cash{
+    margin-top: 5vw;
+}
+.card_type{
+    padding-top: 2vw;
+    padding-left: 6vw;
+}
+.select_bankc{
+    width: 7vw;
+    font-size: 1vw;
+}
+.select_cardc{
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+.card_image{
+      height: 1.1vw;
+    margin-top: 2vw;
+}
+.form-control {
+    display: block;
+    width: 100% !important;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+input#month , #year{
+    width: 4vw !important;
+    display: inline;
+    position: relative;
+    top: 2.3vw;
+    right: 5vw;
+}
+input#month{
+    margin-right: 0.4vw;
+}
